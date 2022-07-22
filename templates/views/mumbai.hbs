@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us" class="weatherapp">
+
+<head <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+
+    {{!-- sweetalert link --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    {{!-- Jquery Link --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title id="change">Mumbai | Maharashtra</title>
+    <link rel="icon" href="/img/wea.jpg">
+    <link rel="stylesheet" href="css/pune.css">
+</head>
+
+<body onload = "loadFunc()">
+
+    <div id="loading"></div>
+
+    {{>header}}
+
+    <div id="firstDiv">
+        <br><br><br><br><br>
+        <center>
+            <div id="search">
+                <input id="searchBox" type="text" value="mumbai">
+                <button id="searchBn">
+                    <b>Search</b>
+                </button>
+            </div>
+        </center>
+    </div>
+
+    <center id="error">
+        <div id="mainDiv">
+            <div id="pic">
+                <i id="icon" class="fas fa-cloud-sun"></i><br><br><br><br>
+                <b id="descri">CLEAR SKY</b>
+            </div>
+
+            <div id="ani">
+                <div class="wave-one"></div>
+                <div class="wave-two"></div>
+                <div class="wave-three"></div>
+            </div>
+
+            <i class="fas fa-street-view"></i>
+            <spam id="pune">&nbsp Mumbai | IN</spam><br><br>
+
+            <!--Date and Time Start Here-->
+            <spam id="day"> WED </spam>
+            <b style="position:relative">|</b>
+            <spam id="month"> APR &nbsp </spam>
+            <spam id="date"> 04 </spam>
+            <b style="position:relative">|</b>
+            <spam id="hour">10</spam>
+            <b style="position:relative">:</b>
+            <spam id="min">57</spam>
+            <spam id="am">AM</spam>
+            <br><br>
+            <!--Date and Time End Here-->
+
+            <spam id="temp">40° C</spam><br>
+            <spamn id="range">Min : 39 °C | MAX : 42° C</spam><br><br>
+        </div>
+    </center>
+
+    {{>footer}}
+
+    <script src="js/pune.js"></script>
+</body>
+</html>

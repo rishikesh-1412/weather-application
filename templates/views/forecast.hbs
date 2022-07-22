@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us" class="weatherapp">
+
+<head <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+
+    {{!-- sweetalert link --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    {{!-- Jquery Link --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title id="change">Pune | Maharashtra</title>
+    <link rel="icon" href="/img/wea.jpg">
+    <link rel="stylesheet" href="css/forecast.css">
+</head>
+
+<body onload = "loadFunc()">
+
+    <div id="loading"></div>
+
+    {{>header}}
+
+    <div id="firstDiv">
+        <br><br><br><br><br>
+        <center>
+            <div id="search">
+                <input id="searchBox" type="text" value="pune">
+                <button id="searchBn">
+                    <b>Search</b>
+                </button>
+            </div>
+        </center>   
+    </div>
+    <br><br><br>
+
+    <center class="clear">
+        <nav id="one">
+            <br><br>
+            <b id="city1" class="location">Pune | IN</b><br><br>
+            <b id="dateMonth1" class="monDate">March 12</b><br><br>
+            <img class="genIcon" src="/img/wea.jpg"></img><br><br>
+            <b id="desci1"> CLEAR SKY </b> <br>
+            <b id="temp1">30°C</b><br>
+            <spamn id="range1">Min : 29 °C | MAX : 32° C</spam>
+        </nav>
+
+        <nav id="two">
+            <br><br>
+            <b id="city2" class="location">Pune | IN</b><br><br>
+            <b id="dateMonth2" class="monDate">March 13</b><br><br>
+            <img class="genIcon" src="/img/wea.jpg"></img><br><br>
+            <b id="desci2">CLEAR SKY</b><br>
+            <b id="temp2">31°C</b><br>
+            <spamn id="range2">Min : 29 °C | MAX : 32° C</spam>
+        </nav>
+
+        <nav id="three">
+            <br><br>
+            <b id="city3" class="location">Pune | IN</b><br><br>
+            <b id="dateMonth3" class="monDate">March 14</b><br><br>
+            <img class="genIcon" src="/img/wea.jpg"></img><br><br>
+            <b id="desci3">CLEAR SKY</b><br>
+            <b id="temp3">35°C</b><br>
+            <spamn id="range3">Min : 29 °C | MAX : 32° C</spam>
+        </nav>
+
+        <nav id="four">
+            <br><br>
+            <b id="city4" class="location">Pune | IN</b><br><br>
+            <b id="dateMonth4" class="monDate">March 15</b><br><br>
+            <img class="genIcon" src="/img/wea.jpg"></img><br><br>
+            <b id="desci4">CLEAR SKY</b><br>
+            <b id="temp4">28°C</b><br>
+            <spamn id="range4">Min : 29 °C | MAX : 32° C</spam>
+        </nav>
+
+        <nav id="five">
+            <br><br>
+            <b id="city5" class="location">Pune | IN</b><br><br>
+            <b id="dateMonth5" class="monDate">March 16</b><br><br>
+            <img class="genIcon" src="/img/wea.jpg"></img><br><br>
+            <b id="desci5">CLEAR SKY</b><br>
+            <b id="temp5">33°C</b><br>
+            <spamn id="range5">Min : 29 °C | MAX : 32° C</spam>
+        </nav>
+    </center>
+    <br><br>
+
+    {{>footer}}
+
+    <script src="js/forecast.js"></script>
+</body>
+</html>

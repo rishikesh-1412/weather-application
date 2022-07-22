@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us" class="weatherapp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+
+    {{!-- sweetalert link --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    {{!-- Jquery Link --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>{{title}}</title>
+
+    <link rel="icon" href="/img/wea.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body onload = "loadFunc()">
+
+    <div id="loading"></div>
+    
+    {{>header}}
+    
+    <div id="firstDiv">
+        <br><br><br><br><br><br><br><br><br>
+
+        <center>
+            <select id="searchBox" name="city">
+                <option disabled selected value="none">Select Choice Here....</option>
+                <option value="byName">Search By City Name</option>
+                {{!-- <option value="byLocation">Search By Location ()</option> --}} 
+            </select>
+        </center>
+        <br><br><br>
+
+        <center>
+            <button id="searchButton">Get Started</button>
+        </center><br><br><br><br><br>
+
+        <centre>
+            <div id="pune" class="example">
+                Pune, India &nbsp &nbsp &nbsp &nbsp 34° C
+            </div>
+
+            <div id="mumbai" class="example">
+                Mumbai, India &nbsp &nbsp &nbsp &nbsp 35° C
+            </div>
+        </centre>
+    </div>
+
+    {{>footer}}
+
+    <script src="js/home.js"></script>
+</body>
+</html>
